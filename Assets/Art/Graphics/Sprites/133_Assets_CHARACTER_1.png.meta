@@ -33,7 +33,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -66,7 +66,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 8192
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -2838,16 +2838,17 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      133_Assets_CHARACTER_1_16: -2102443083
+      133_Assets_CHARACTER_1_21: 1794226921
       133_Assets_CHARACTER_1_19: -1205243281
       133_Assets_CHARACTER_1_104: -1557948088
-      133_Assets_CHARACTER_1_38: -1607069441
-      133_Assets_CHARACTER_1_66: -909374456
       133_Assets_CHARACTER_1_85: 73387636
+      133_Assets_CHARACTER_1_66: -909374456
+      133_Assets_CHARACTER_1_99: -1903710248
+      133_Assets_CHARACTER_1_45: -805742799
       133_Assets_CHARACTER_1_61: -1078301605
       133_Assets_CHARACTER_1_81: -919277014
       133_Assets_CHARACTER_1_39: 58937270
-      133_Assets_CHARACTER_1_99: -1903710248
+      133_Assets_CHARACTER_1_125: -308126458
       133_Assets_CHARACTER_1_42: 244438146
       133_Assets_CHARACTER_1_107: 1725280005
       133_Assets_CHARACTER_1_72: -1567789881
@@ -2858,7 +2859,6 @@ TextureImporter:
       133_Assets_CHARACTER_1_112: -471847754
       133_Assets_CHARACTER_1_44: 1677836365
       133_Assets_CHARACTER_1_115: 149066049
-      133_Assets_CHARACTER_1_125: -308126458
       133_Assets_CHARACTER_1_113: -311048400
       133_Assets_CHARACTER_1_101: 1863314235
       133_Assets_CHARACTER_1_48: 527992826
@@ -2872,12 +2872,12 @@ TextureImporter:
       133_Assets_CHARACTER_1_105: 972009262
       133_Assets_CHARACTER_1_58: -703167403
       133_Assets_CHARACTER_1_92: -991761817
-      133_Assets_CHARACTER_1_22: -177576522
       133_Assets_CHARACTER_1_91: -375372854
+      133_Assets_CHARACTER_1_22: -177576522
       133_Assets_CHARACTER_1_83: -999051848
       133_Assets_CHARACTER_1_15: -311966556
-      133_Assets_CHARACTER_1_71: 1023435414
       133_Assets_CHARACTER_1_68: 228241354
+      133_Assets_CHARACTER_1_71: 1023435414
       133_Assets_CHARACTER_1_64: -1990333230
       133_Assets_CHARACTER_1_37: 241420863
       133_Assets_CHARACTER_1_98: -608850051
@@ -2963,9 +2963,9 @@ TextureImporter:
       133_Assets_CHARACTER_1_35: -1493071924
       133_Assets_CHARACTER_1_41: 997370782
       133_Assets_CHARACTER_1_55: 637005767
-      133_Assets_CHARACTER_1_21: 1794226921
       133_Assets_CHARACTER_1_10: 1868451251
-      133_Assets_CHARACTER_1_45: -805742799
+      133_Assets_CHARACTER_1_38: -1607069441
+      133_Assets_CHARACTER_1_16: -2102443083
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
