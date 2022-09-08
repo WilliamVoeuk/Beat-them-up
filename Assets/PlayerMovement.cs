@@ -7,8 +7,8 @@ public class PlayerMovement : MonoBehaviour
 {
     [Header("Input")]
     [SerializeField] InputActionReference _moveInput;
-    //[SerializeField] InputActionReference _JumpInput;
-    //[SerializeField] InputActionReference _AttackInput;
+    [SerializeField] InputActionReference _JumpInput;
+    [SerializeField] InputActionReference _AttackInput;
     [SerializeField] InputActionReference _RunInput;
 
     [Header("Movement")]
@@ -21,17 +21,29 @@ public class PlayerMovement : MonoBehaviour
 
     Vector3 direction;
     bool _isRunning;
+    bool _isAttack;//To do : rajouter l'animation.
+    bool _isJumping;
 
     void Start()
     {
+        //Move
         _moveInput.action.started += StartMove;
         _moveInput.action.performed += StartMove;
         _moveInput.action.canceled += EndMove;
 
+        //Run
         _RunInput.action.started += RunStart;
         _RunInput.action.canceled += EndRun;
-    }
 
+        //Attack
+        _AttackInput.action.started += StartAttack;
+        _AttackInput.action.canceled += EndAttack;
+
+        //Jump
+        _JumpInput.action.started += JumpStart;
+        _JumpInput.action.canceled += EndJump;
+    }
+    
 
     void FixedUpdate()
     {
@@ -55,6 +67,7 @@ public class PlayerMovement : MonoBehaviour
         direction = Vector2.zero;
     }
     #endregion
+
     #region Run
     private void RunStart(InputAction.CallbackContext obj)
     {
@@ -68,5 +81,29 @@ public class PlayerMovement : MonoBehaviour
         Debug.Log("NoRun");
 
     }
-    #endregion 
+    #endregion
+
+    #region Attack
+    private void StartAttack(InputAction.CallbackContext obj)
+    {
+        _isAttack = true;
+    }
+
+    private void EndAttack(InputAction.CallbackContext obj)
+    {
+        _isAttack = false;        
+    }
+    #endregion
+
+    #region Jump
+    private void JumpStart(InputAction.CallbackContext obj)
+    {
+        _isJumping = true;
+    }
+
+    private void EndJump(InputAction.CallbackContext obj)
+    {
+        _isJumping = false;
+    }
+    #endregion
 }
