@@ -15,14 +15,16 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] Transform _root;
     [SerializeField] float _speed;
     //[SerializeField] float _movingThreshold;
+    [SerializeField] Animator _animation;
     [SerializeField] float _speedMultiplicator;
     [SerializeField] Rigidbody2D _rb;
 
 
     Vector3 direction;
+    //bool _isWalking;
     bool _isRunning;
-    bool _isAttack;//To do : rajouter l'animation.
-    bool _isJumping;
+    //bool _isAttack;//To do : rajouter l'animation.
+    //bool _isJumping;
 
     void Start()
     {
@@ -47,6 +49,10 @@ public class PlayerMovement : MonoBehaviour
 
     void FixedUpdate()
     {
+        //_animation.SetBool("IsWalking", _isWalking);
+        //_animation.SetBool("IsRunning", _isRunning);
+        //_animation.SetBool("IsJumping", _isJumping);
+        //_animation.SetBool("IsAttack", _isAttack);
         if (_isRunning)
         {
             _rb.MovePosition(transform.position + (direction * Time.fixedDeltaTime * (_speed * _speedMultiplicator)));
@@ -60,11 +66,13 @@ public class PlayerMovement : MonoBehaviour
     void StartMove(InputAction.CallbackContext obj)
     {
         direction = obj.ReadValue<Vector2>();
+        //_isWalking = true;
     }
     
     void EndMove(InputAction.CallbackContext obj)
     {
         direction = Vector2.zero;
+        //_isWalking = false;
     }
     #endregion
 
