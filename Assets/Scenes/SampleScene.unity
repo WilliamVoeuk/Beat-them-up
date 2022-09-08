@@ -610,9 +610,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _moveInput: {fileID: 227172467615778843, guid: 8e800c113a8c38c49816e2ed915ad067, type: 3}
+  _RunInput: {fileID: 6938188500677071925, guid: 8e800c113a8c38c49816e2ed915ad067, type: 3}
   _root: {fileID: 1960635636}
   _speed: 5
-  _movingThreshold: 0.1
+  _speedMultiplicator: 2.5
+  _rb: {fileID: 1960635635}
 --- !u!114 &1586232510
 MonoBehaviour:
   m_ObjectHideFlags: 0

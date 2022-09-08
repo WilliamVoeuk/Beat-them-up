@@ -7,35 +7,66 @@ public class PlayerMovement : MonoBehaviour
 {
     [Header("Input")]
     [SerializeField] InputActionReference _moveInput;
+    //[SerializeField] InputActionReference _JumpInput;
+    //[SerializeField] InputActionReference _AttackInput;
+    [SerializeField] InputActionReference _RunInput;
 
     [Header("Movement")]
     [SerializeField] Transform _root;
     [SerializeField] float _speed;
-    [SerializeField] float _movingThreshold;
+    //[SerializeField] float _movingThreshold;
+    [SerializeField] float _speedMultiplicator;
+    [SerializeField] Rigidbody2D _rb;
 
-    Vector2 _playerMovement;
+
+    Vector3 direction;
+    bool _isRunning;
 
     void Start()
     {
         _moveInput.action.started += StartMove;
-        _moveInput.action.performed += UpdateMove;
+        _moveInput.action.performed += StartMove;
         _moveInput.action.canceled += EndMove;
+
+        _RunInput.action.started += RunStart;
+        _RunInput.action.canceled += EndRun;
     }
+
+
     void FixedUpdate()
     {
-        Vector2 direction = new Vector2(_playerMovement.x, _playerMovement.y);
-        _root.transform.Translate(direction * Time.fixedDeltaTime * _speed, Space.World);
+        if (_isRunning)
+        {
+            _rb.MovePosition(transform.position + (direction * Time.fixedDeltaTime * (_speed * _speedMultiplicator)));
+        }
+        else
+        {
+            _rb.MovePosition(transform.position + (direction * Time.fixedDeltaTime * _speed));
+        }
     }
+    #region Move
     void StartMove(InputAction.CallbackContext obj)
     {
-        _playerMovement = obj.ReadValue<Vector2>();
+        direction = obj.ReadValue<Vector2>();
     }
-    void UpdateMove(InputAction.CallbackContext obj)
-    {
-        _playerMovement = obj.ReadValue<Vector2>();
-    }
+    
     void EndMove(InputAction.CallbackContext obj)
     {
-        _playerMovement = new Vector2(0, 0);
+        direction = Vector2.zero;
     }
+    #endregion
+    #region Run
+    private void RunStart(InputAction.CallbackContext obj)
+    {
+        _isRunning = true;
+        Debug.Log("Run");
+    }
+
+    private void EndRun(InputAction.CallbackContext obj)
+    {
+        _isRunning = false;
+        Debug.Log("NoRun");
+
+    }
+    #endregion 
 }
