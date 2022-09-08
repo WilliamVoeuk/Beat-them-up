@@ -362,6 +362,7 @@ GameObject:
   m_Component:
   - component: {fileID: 796023824}
   - component: {fileID: 796023825}
+  - component: {fileID: 796023826}
   m_Layer: 0
   m_Name: Render
   m_TagString: Untagged
@@ -436,6 +437,26 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &796023826
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 796023823}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a82af76bfc6281e4c9097c1113dab5d2, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1155973169
 GameObject:
   m_ObjectHideFlags: 0
@@ -610,6 +631,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _moveInput: {fileID: 227172467615778843, guid: 8e800c113a8c38c49816e2ed915ad067, type: 3}
+  _JumpInput: {fileID: 0}
+  _AttackInput: {fileID: 0}
   _RunInput: {fileID: 6938188500677071925, guid: 8e800c113a8c38c49816e2ed915ad067, type: 3}
   _root: {fileID: 1960635636}
   _speed: 5
