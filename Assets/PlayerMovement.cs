@@ -5,6 +5,7 @@ using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
 {
+    #region Champs
     [Header("Input")]
     [SerializeField] InputActionReference _moveInput;
     [SerializeField] InputActionReference _JumpInput;
@@ -12,19 +13,27 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] InputActionReference _RunInput;
 
     [Header("Movement")]
-    [SerializeField] Transform _root;
     [SerializeField] float _speed;
     //[SerializeField] float _movingThreshold;
     [SerializeField] Animator _animation;
     [SerializeField] float _speedMultiplicator;
     [SerializeField] Rigidbody2D _rb;
 
-
     Vector3 direction;
-    //bool _isWalking;
     bool _isRunning;
+    //bool _isWalking;
     //bool _isAttack;//To do : rajouter l'animation.
     //bool _isJumping;
+    #endregion
+
+    #region reset
+    private void Reset()
+    {
+        _speed = 5f;
+        _speedMultiplicator = 2.5f;
+    }
+    #endregion
+
 
     void Start()
     {
@@ -94,24 +103,24 @@ public class PlayerMovement : MonoBehaviour
     #region Attack
     private void StartAttack(InputAction.CallbackContext obj)
     {
-        _isAttack = true;
+        //_isAttack = true;
     }
 
     private void EndAttack(InputAction.CallbackContext obj)
     {
-        _isAttack = false;        
+        //_isAttack = false;        
     }
     #endregion
 
     #region Jump
     private void JumpStart(InputAction.CallbackContext obj)
     {
-        _isJumping = true;
+        //_isJumping = true;
     }
 
     private void EndJump(InputAction.CallbackContext obj)
     {
-        _isJumping = false;
+        //_isJumping = false;
     }
     #endregion
 }
