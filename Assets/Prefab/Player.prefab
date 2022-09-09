@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Actions: {fileID: -944628639613478452, guid: 8e800c113a8c38c49816e2ed915ad067, type: 3}
-  m_NotificationBehavior: 0
+  m_NotificationBehavior: 3
   m_UIInputModule: {fileID: 0}
   m_DeviceLostEvent:
     m_PersistentCalls:
@@ -76,11 +76,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _moveInput: {fileID: 227172467615778843, guid: 8e800c113a8c38c49816e2ed915ad067, type: 3}
-  _JumpInput: {fileID: 0}
-  _AttackInput: {fileID: 0}
+  _JumpInput: {fileID: -4543771540272580436, guid: 8e800c113a8c38c49816e2ed915ad067, type: 3}
+  _AttackInput: {fileID: -9220238437504543878, guid: 8e800c113a8c38c49816e2ed915ad067, type: 3}
   _RunInput: {fileID: 6938188500677071925, guid: 8e800c113a8c38c49816e2ed915ad067, type: 3}
   _speed: 5
-  _animation: {fileID: 0}
+  _animation: {fileID: 5747813382658089410}
   _speedMultiplicator: 2.5
   _rb: {fileID: 5747813381226418467}
 --- !u!1 &5747813381226418466
@@ -165,7 +165,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5747813381230270191}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.135, y: 0.397, z: 0}
+  m_LocalPosition: {x: 1.135, y: 1.04, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

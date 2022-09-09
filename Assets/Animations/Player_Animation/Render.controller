@@ -278,9 +278,9 @@ AnimatorStateMachine:
   m_AnyStateTransitions: []
   m_EntryTransitions: []
   m_StateMachineTransitions:
-  - first: {fileID: -788244180918206321}
-    second: []
   - first: {fileID: 4703153078073195272}
+    second: []
+  - first: {fileID: -788244180918206321}
     second: []
   m_StateMachineBehaviours: []
   m_AnyStatePosition: {x: 50, y: 20, z: 0}

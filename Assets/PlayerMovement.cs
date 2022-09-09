@@ -21,9 +21,9 @@ public class PlayerMovement : MonoBehaviour
 
     Vector3 direction;
     bool _isRunning;
-    //bool _isWalking;
-    //bool _isAttack;//To do : rajouter l'animation.
-    //bool _isJumping;
+    bool _isWalking;
+    bool _isAttack;
+    bool _isJumping;
     #endregion
 
     #region reset
@@ -58,10 +58,10 @@ public class PlayerMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-        //_animation.SetBool("IsWalking", _isWalking);
-        //_animation.SetBool("IsRunning", _isRunning);
-        //_animation.SetBool("IsJumping", _isJumping);
-        //_animation.SetBool("IsAttack", _isAttack);
+        _animation.SetBool("IsWalking", _isWalking);
+        _animation.SetBool("IsRunning", _isRunning);
+        _animation.SetBool("IsJumping", _isJumping);
+        _animation.SetBool("IsAttacking", _isAttack);
         if (_isRunning)
         {
             _rb.MovePosition(transform.position + (direction * Time.fixedDeltaTime * (_speed * _speedMultiplicator)));
@@ -75,13 +75,13 @@ public class PlayerMovement : MonoBehaviour
     void StartMove(InputAction.CallbackContext obj)
     {
         direction = obj.ReadValue<Vector2>();
-        //_isWalking = true;
+        _isWalking = true;
     }
     
     void EndMove(InputAction.CallbackContext obj)
     {
         direction = Vector2.zero;
-        //_isWalking = false;
+        _isWalking = false;
     }
     #endregion
 
@@ -103,24 +103,26 @@ public class PlayerMovement : MonoBehaviour
     #region Attack
     private void StartAttack(InputAction.CallbackContext obj)
     {
-        //_isAttack = true;
+        _isAttack = true;
     }
 
     private void EndAttack(InputAction.CallbackContext obj)
     {
-        //_isAttack = false;        
+        _isAttack = false;        
     }
     #endregion
 
     #region Jump
     private void JumpStart(InputAction.CallbackContext obj)
     {
-        //_isJumping = true;
+        _isJumping = true;
+        Debug.Log("youpi j'ai sauté");
     }
 
     private void EndJump(InputAction.CallbackContext obj)
     {
-        //_isJumping = false;
+        _isJumping = false;
+        Debug.Log("youpi j'ai saute plus");
     }
     #endregion
 }
