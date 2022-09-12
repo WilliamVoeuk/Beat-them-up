@@ -231,6 +231,54 @@
                     "isPartOfComposite": false
                 }
             ]
+        },
+        {
+            "name": "Advanced Moves",
+            "id": "55678072-f3e4-4208-b4c3-8dcf61d0284b",
+            "actions": [
+                {
+                    "name": "Pick Up",
+                    "type": "Button",
+                    "id": "80bc2c2a-f332-44fe-8a7b-1598ec559a57",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Throw",
+                    "type": "Button",
+                    "id": "d5aed3a9-c875-4bab-be26-300745b7a89b",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "a306835a-7467-4233-ba3f-994811f0b623",
+                    "path": "<Keyboard>/q",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pick Up",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "df644a31-3b07-48c8-92f1-99c9f246253d",
+                    "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Throw",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
         }
     ],
     "controlSchemes": []
