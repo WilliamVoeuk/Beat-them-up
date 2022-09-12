@@ -210,6 +210,17 @@
                 },
                 {
                     "name": "",
+                    "id": "208b3f0e-6b56-473b-878b-8165317e933b",
+                    "path": "<DualShockGamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Attack",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "3c72ab59-afa6-4ca8-8e75-0fa30198d47f",
                     "path": "<Keyboard>/space",
                     "interactions": "",
@@ -221,8 +232,30 @@
                 },
                 {
                     "name": "",
+                    "id": "dcc5960b-0a10-482d-be4a-2d41f46b0bed",
+                    "path": "<DualShockGamepad>/rightShoulder",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Jump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "ad9ae28f-cb8b-48fe-8bea-63d08d8a7aed",
                     "path": "<Keyboard>/shift",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Run",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "2bd21d90-545a-4565-9c50-fe9013709cb7",
+                    "path": "<DualShockGamepad>/leftStickPress",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
