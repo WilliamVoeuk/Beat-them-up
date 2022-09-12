@@ -122,22 +122,25 @@ public class PlayerMovement : MonoBehaviour
     private void Jump(InputAction.CallbackContext obj)
     {
         _animation.SetTrigger("Jump");
+        Debug.Log("Jump");
     }
 
     #endregion
 
     #region PickUp
-    void Pickup(InputAction.CallbackContext obj)
+    private void Pickup(InputAction.CallbackContext obj)
     {
         _animation.SetTrigger("PickUp");
+        Debug.Log("Pickup");
     }
 
     #endregion
 
     #region Throw
-    void Throw(InputAction.CallbackContext obj)
+    private void Throw(InputAction.CallbackContext obj)
     {
         _animation.SetTrigger("Throw");
+        Debug.Log("Pickup");
     }
     #endregion
 
