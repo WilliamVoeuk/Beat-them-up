@@ -6,11 +6,15 @@ using UnityEngine.InputSystem;
 public class PlayerMovement : MonoBehaviour
 {
     #region Champs
-    [Header("Input")]
+    [Header("Basic Input")]
     [SerializeField] InputActionReference _moveInput;
     [SerializeField] InputActionReference _JumpInput;
     [SerializeField] InputActionReference _AttackInput;
     [SerializeField] InputActionReference _RunInput;
+
+    [Header("Advanced Input")]
+    [SerializeField] InputActionReference _PickUp;
+    [SerializeField] InputActionReference _Throw;
 
     [Header("Movement")]
     [SerializeField] float _speed;
@@ -22,8 +26,8 @@ public class PlayerMovement : MonoBehaviour
     Vector3 direction;
     bool _isRunning;
     bool _isWalking;
-    bool _isAttack;
-    bool _isJumping;
+    bool _onAir;
+    bool _withCan;
     #endregion
 
     #region reset
@@ -47,12 +51,16 @@ public class PlayerMovement : MonoBehaviour
         _RunInput.action.canceled += EndRun;
 
         //Attack
-        _AttackInput.action.started += StartAttack;
-        _AttackInput.action.canceled += EndAttack;
+        _AttackInput.action.started += Attack;
 
         //Jump
-        _JumpInput.action.started += JumpStart;
-        _JumpInput.action.canceled += EndJump;
+        _JumpInput.action.started += Jump;
+
+        //PickUp
+        _PickUp.action.started += Pickup;
+
+        //PickUp
+        _Throw.action.started += Throw;
     }
     
 
@@ -60,8 +68,10 @@ public class PlayerMovement : MonoBehaviour
     {
         _animation.SetBool("IsWalking", _isWalking);
         _animation.SetBool("IsRunning", _isRunning);
-        _animation.SetBool("IsJumping", _isJumping);
-        _animation.SetBool("IsAttacking", _isAttack);
+        _animation.SetBool("OnAir", _onAir);
+        _animation.SetBool("IsWithCan", _withCan);
+
+
         if (_isRunning)
         {
             _rb.MovePosition(transform.position + (direction * Time.fixedDeltaTime * (_speed * _speedMultiplicator)));
@@ -101,28 +111,34 @@ public class PlayerMovement : MonoBehaviour
     #endregion
 
     #region Attack
-    private void StartAttack(InputAction.CallbackContext obj)
+    private void Attack(InputAction.CallbackContext obj)
     {
-        _isAttack = true;
+        _animation.SetTrigger("Attack");
     }
 
-    private void EndAttack(InputAction.CallbackContext obj)
-    {
-        _isAttack = false;        
-    }
     #endregion
 
     #region Jump
-    private void JumpStart(InputAction.CallbackContext obj)
+    private void Jump(InputAction.CallbackContext obj)
     {
-        _isJumping = true;
-        Debug.Log("youpi j'ai sauté");
+        _animation.SetTrigger("Jump");
     }
 
-    private void EndJump(InputAction.CallbackContext obj)
+    #endregion
+
+    #region PickUp
+    void Pickup(InputAction.CallbackContext obj)
     {
-        _isJumping = false;
-        Debug.Log("youpi j'ai saute plus");
+        _animation.SetTrigger("PickUp");
+    }
+
+    #endregion
+
+    #region Throw
+    void Throw(InputAction.CallbackContext obj)
+    {
+        _animation.SetTrigger("Throw");
     }
     #endregion
+
 }
