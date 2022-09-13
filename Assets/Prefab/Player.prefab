@@ -72,6 +72,7 @@ GameObject:
   - component: {fileID: 1239491379}
   - component: {fileID: 1239491380}
   - component: {fileID: 1239491381}
+  - component: {fileID: 8833171498698437882}
   m_Layer: 0
   m_Name: Action
   m_TagString: Untagged
@@ -194,9 +195,24 @@ MonoBehaviour:
   _PickUp: {fileID: 0}
   _Throw: {fileID: 0}
   movement: {fileID: 1239491380}
-  jump: {fileID: 0}
+  jump: {fileID: 8833171498698437882}
   attack: {fileID: 1239491379}
-  run: {fileID: 0}
+--- !u!114 &8833171498698437882
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5747813380793287019}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8cfc080293ee2346b0a2f90ac8233ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animation: {fileID: 5747813382658089410}
+  movement: {fileID: 1239491380}
+  jump: {fileID: 8833171498698437882}
+  attack: {fileID: 1239491379}
 --- !u!1 &5747813381226418466
 GameObject:
   m_ObjectHideFlags: 0

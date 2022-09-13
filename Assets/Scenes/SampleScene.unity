@@ -256,7 +256,7 @@ MonoBehaviour:
   Slider2: {fileID: 505628519}
   Slider3: {fileID: 1308320048}
   _dammage: 0
-  _health: 0
+  _health: 100
 --- !u!1 &208897393
 GameObject:
   m_ObjectHideFlags: 0
@@ -1078,7 +1078,7 @@ MonoBehaviour:
   m_MinValue: 33
   m_MaxValue: 67
   m_WholeNumbers: 0
-  m_Value: 33
+  m_Value: 67
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -2615,7 +2615,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 33
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 33
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -3199,7 +3199,7 @@ MonoBehaviour:
   m_MinValue: 67
   m_MaxValue: 100
   m_WholeNumbers: 0
-  m_Value: 67
+  m_Value: 100
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -3586,6 +3586,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2547945178323542416, guid: b8972c6e8a51d134882d3ccb7a18369c, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 5747813380793287021, guid: b8972c6e8a51d134882d3ccb7a18369c, type: 3}
       propertyPath: _Throw
       value: 

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -21,9 +22,15 @@ public class PlayerBrain : MonoBehaviour
     [SerializeField] Movement movement;
     [SerializeField] Jump jump;
     [SerializeField] Attack attack;
+
+
+    /* ON VA AVOIR UN PETIT SOUCIS IL VA FALLOIR LES RENOMMER
+    //[SerializeField] Pickup pickup;
+    //[SerializeField] Throw throw; */
     #endregion
 
-    void Start()
+    #region Start
+    void Start ()
     {
         //Move
         _moveInput.action.started += StartMove;
@@ -39,35 +46,19 @@ public class PlayerBrain : MonoBehaviour
 
         //Jump
         _JumpInput.action.started += Jump;
-        
-        ////PickUp
-        //_PickUp.action.started += Pickup;
-        //
-        ////PickUp
-        //_Throw.action.started += Throw;
+
+        /*//PickUp
+        _PickUp.action.started += Pickup;
+
+        //PickUp
+        _Throw.action.started += Throw;*/
+
+
     }
-
-    private void Jump (InputAction.CallbackContext obj)
-    {
-        throw new System.NotImplementedException ();
-    }
-
-    private void Attack (InputAction.CallbackContext obj)
-    {
-        attack.Launch();
-    }
-
-    private void RunStart (InputAction.CallbackContext obj)
-    {
-        movement.Load();
-    }
-
-    private void EndRun (InputAction.CallbackContext obj)
-    {
-        movement.UnLoad();        
-    }
+    #endregion
 
 
+    #region Move
     private void StartMove(InputAction.CallbackContext obj)
     {
         movement.SetDirection(obj.ReadValue<Vector2>());
@@ -77,7 +68,53 @@ public class PlayerBrain : MonoBehaviour
     {
         movement.SetDirection(Vector2.zero);
     }
+    #endregion
 
+
+    #region Run
+    private void RunStart (InputAction.CallbackContext obj)
+    {
+        movement.Load();
+    }
+
+
+    private void EndRun (InputAction.CallbackContext obj)
+    {
+        movement.UnLoad();        
+    }
+    #endregion
+
+
+    #region Attack
+    private void Attack (InputAction.CallbackContext obj)
+    {
+        attack.Launch();
+    }
+    #endregion
+
+
+    #region Jump
+    private void Jump (InputAction.CallbackContext obj)
+    {
+        jump.Load ();
+    }
+    #endregion
+
+
+    //#region Pickup
+    //private void Pickup (InputAction.CallbackContext obj)
+    //{
+    //    pickup.Take ();
+    //}
+    //#endregion
+    //
+    //
+    //#region Throw
+    //private void Throw (InputAction.CallbackContext obj)
+    //{
+    //    throw.Take ();
+    //}
+    //#endregion
 
 
 }
