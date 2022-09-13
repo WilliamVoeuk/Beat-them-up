@@ -322,17 +322,6 @@
                     "action": "TakeDMG",
                     "isComposite": false,
                     "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "015b94e9-dc3f-418e-9d91-edd3273e65aa",
-                    "path": "<Keyboard>/i",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "TakeDMG",
-                    "isComposite": false,
-                    "isPartOfComposite": false
                 }
             ]
         }
