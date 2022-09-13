@@ -15,6 +15,33 @@
                     "initialStateCheck": true
                 },
                 {
+                    "name": "TakeDMG",
+                    "type": "Button",
+                    "id": "d2d33ea3-648e-45ee-9321-61af235d6501",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Throw",
+                    "type": "Button",
+                    "id": "b87896be-3d3a-4ee8-a578-89adbad46c14",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Pick Up",
+                    "type": "Button",
+                    "id": "9d2f24f4-6c10-4b63-9395-365e17e79688",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
                     "name": "Attack",
                     "type": "Button",
                     "id": "b16dea95-4f4c-421b-8ccc-7be601447e96",
@@ -210,8 +237,30 @@
                 },
                 {
                     "name": "",
+                    "id": "208b3f0e-6b56-473b-878b-8165317e933b",
+                    "path": "<DualShockGamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Attack",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "3c72ab59-afa6-4ca8-8e75-0fa30198d47f",
                     "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Jump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "dcc5960b-0a10-482d-be4a-2d41f46b0bed",
+                    "path": "<DualShockGamepad>/rightShoulder",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -229,36 +278,21 @@
                     "action": "Run",
                     "isComposite": false,
                     "isPartOfComposite": false
-                }
-            ]
-        },
-        {
-            "name": "Advanced Moves",
-            "id": "55678072-f3e4-4208-b4c3-8dcf61d0284b",
-            "actions": [
-                {
-                    "name": "Pick Up",
-                    "type": "Button",
-                    "id": "80bc2c2a-f332-44fe-8a7b-1598ec559a57",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
                 },
                 {
-                    "name": "Throw",
-                    "type": "Button",
-                    "id": "d5aed3a9-c875-4bab-be26-300745b7a89b",
-                    "expectedControlType": "Button",
-                    "processors": "",
+                    "name": "",
+                    "id": "2bd21d90-545a-4565-9c50-fe9013709cb7",
+                    "path": "<DualShockGamepad>/leftStickPress",
                     "interactions": "",
-                    "initialStateCheck": false
-                }
-            ],
-            "bindings": [
+                    "processors": "",
+                    "groups": "",
+                    "action": "Run",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
                 {
                     "name": "",
-                    "id": "a306835a-7467-4233-ba3f-994811f0b623",
+                    "id": "f63baecf-d325-4bdd-be0f-8c7715079b8d",
                     "path": "<Keyboard>/q",
                     "interactions": "",
                     "processors": "",
@@ -269,12 +303,34 @@
                 },
                 {
                     "name": "",
-                    "id": "df644a31-3b07-48c8-92f1-99c9f246253d",
+                    "id": "e3b853f4-7266-4c76-ad2b-8b6d8b366ac4",
                     "path": "<Keyboard>/e",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
                     "action": "Throw",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "4a07d2c5-e98c-4a2e-a3ab-38e71123f923",
+                    "path": "<Keyboard>/u",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "TakeDMG",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "015b94e9-dc3f-418e-9d91-edd3273e65aa",
+                    "path": "<Keyboard>/i",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "TakeDMG",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
