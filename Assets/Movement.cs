@@ -23,24 +23,29 @@ public class Movement : MonoBehaviour
     {
         _direction = vector2;
 
-        if (_direction.magnitude > 0 && _isRunning)
-        {
-            _rb.MovePosition (transform.position + (_direction * Time.fixedDeltaTime * (_speed * _speedMultiplicator)));
-            _isWalking = false;
-            _isRunning = true;
-        }
-        else if (_direction.magnitude < 0)
-        {
-            _rb.MovePosition(transform.position + (_direction * Time.fixedDeltaTime * _speed));
-            _isWalking = true;
-            _isRunning = false;
-        }
+        //else if (_direction.magnitude < 0)
+        //{
+        //    _rb.MovePosition(transform.position + (_direction * Time.fixedDeltaTime * _speed));
+        //    _isWalking = true;
+        //    _isRunning = false;
+        //}
 
     }
     private void FixedUpdate ()
     {
         _animation.SetBool ("IsWalking", _isWalking);
-        _animation.SetBool ("IsRunning", _isRunning);
+        //_animation.SetBool ("IsRunning", _isRunning);
+        
+        if (_direction.magnitude > 0)
+        {
+            _rb.MovePosition (transform.position + (_direction * Time.fixedDeltaTime * (_speed * _speedMultiplicator)));
+            _isWalking = true;
+            //_isRunning = true;
+        }
+        else
+        {
+            _isWalking = false;
+        }
     }
 
     #endregion
