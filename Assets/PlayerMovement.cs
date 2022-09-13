@@ -61,6 +61,7 @@ public class PlayerMovement : MonoBehaviour
 
         //PickUp
         _Throw.action.started += Throw;
+
     }
     
 
@@ -143,5 +144,6 @@ public class PlayerMovement : MonoBehaviour
         Debug.Log("Pickup");
     }
     #endregion
+
 
 }
