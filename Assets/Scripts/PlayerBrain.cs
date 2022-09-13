@@ -21,7 +21,6 @@ public class PlayerBrain : MonoBehaviour
     [SerializeField] Movement movement;
     [SerializeField] Jump jump;
     [SerializeField] Attack attack;
-    [SerializeField] Run run;
     #endregion
 
     void Start()
@@ -60,12 +59,12 @@ public class PlayerBrain : MonoBehaviour
 
     private void RunStart (InputAction.CallbackContext obj)
     {
-        run.SetDirection(obj.ReadValue<Vector2>());
+        movement.Load();
     }
 
     private void EndRun (InputAction.CallbackContext obj)
     {
-        
+        movement.UnLoad();        
     }
 
 

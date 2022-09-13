@@ -221,30 +221,8 @@
                 },
                 {
                     "name": "",
-                    "id": "8e81f7c7-18e3-4783-8670-74d88d9eec81",
-                    "path": "<Gamepad>/buttonNorth",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Jump",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "ad9ae28f-cb8b-48fe-8bea-63d08d8a7aed",
                     "path": "<Keyboard>/shift",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Run",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "707dcbe5-09d9-4a7c-bd7a-862171045f5f",
-                    "path": "<Gamepad>/buttonEast",
                     "interactions": "",
                     "processors": "",
                     "groups": "",

@@ -22,15 +22,21 @@ public class Movement : MonoBehaviour
     internal void SetDirection(Vector2 vector2)
     {
         _direction = vector2;
-
-        //else if (_direction.magnitude < 0)
-        //{
-        //    _rb.MovePosition(transform.position + (_direction * Time.fixedDeltaTime * _speed));
-        //    _isWalking = true;
-        //    _isRunning = false;
-        //}
-
     }
+
+    public void Load ()
+    {
+        _animation.SetBool ("IsRunning", true);
+        _isRunning = true;
+    }
+    public void UnLoad ()
+    {
+        _isRunning = false;
+        _animation.SetBool ("IsRunning", false);
+    }
+
+
+
     private void FixedUpdate ()
     {
         _animation.SetBool ("IsWalking", _isWalking);
@@ -38,13 +44,24 @@ public class Movement : MonoBehaviour
         
         if (_direction.magnitude > 0)
         {
-            _rb.MovePosition (transform.position + (_direction * Time.fixedDeltaTime * (_speed * _speedMultiplicator)));
+            _rb.MovePosition (transform.position + (_direction * Time.fixedDeltaTime * _speed ));
             _isWalking = true;
-            //_isRunning = true;
         }
         else
         {
-            _isWalking = false;
+            _isWalking = false;            
+        }
+        
+        
+        if (_isRunning)
+        {
+            _rb.MovePosition (transform.position + (_direction * Time.fixedDeltaTime * (_speed * _speedMultiplicator)));
+            _isRunning = true;
+
+        }
+        else
+        {
+            _isRunning = false;
         }
     }
 

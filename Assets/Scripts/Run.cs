@@ -11,6 +11,17 @@ public class Run : MonoBehaviour
     [SerializeField] float _speed;
 
     bool _isRunning;
+
+    internal void launch ()
+    {
+        throw new NotImplementedException ();
+    }
+
+    internal void Launch ()
+    {
+        throw new NotImplementedException ();
+    }
+
     //void FixedUpdate()
     //{
     //    _animation.SetBool ("IsRunning", _isRunning);
@@ -25,11 +36,8 @@ public class Run : MonoBehaviour
     //    }
     //}
 
-    
-    
 
-    internal void SetDirection (Vector2 vector2)
-    {
 
-    }
+
+    
 }
