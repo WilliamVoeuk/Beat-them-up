@@ -255,7 +255,8 @@ MonoBehaviour:
   Slider1: {fileID: 1875966216}
   Slider2: {fileID: 505628519}
   Slider3: {fileID: 1308320048}
-  health: 100
+  _dammage: 0
+  _health: 0
 --- !u!1 &208897393
 GameObject:
   m_ObjectHideFlags: 0
@@ -1077,7 +1078,7 @@ MonoBehaviour:
   m_MinValue: 33
   m_MaxValue: 67
   m_WholeNumbers: 0
-  m_Value: 67
+  m_Value: 33
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -2614,7 +2615,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 33
   m_WholeNumbers: 0
-  m_Value: 33
+  m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -3198,7 +3199,7 @@ MonoBehaviour:
   m_MinValue: 67
   m_MaxValue: 100
   m_WholeNumbers: 0
-  m_Value: 100
+  m_Value: 67
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
