@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1269335712775650291}
-  - component: {fileID: 1269335712775650290}
   m_Layer: 0
   m_Name: Action
   m_TagString: Untagged
@@ -32,26 +31,6 @@ Transform:
   m_Father: {fileID: 1269335713483238331}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1269335712775650290
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1269335712775650292}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e96d2b976ff6ae743aee392678b8b04f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _moveInput: {fileID: 227172467615778843, guid: 8e800c113a8c38c49816e2ed915ad067, type: 3}
-  _JumpInput: {fileID: -4543771540272580436, guid: 8e800c113a8c38c49816e2ed915ad067, type: 3}
-  _AttackInput: {fileID: -9220238437504543878, guid: 8e800c113a8c38c49816e2ed915ad067, type: 3}
-  _RunInput: {fileID: 6938188500677071925, guid: 8e800c113a8c38c49816e2ed915ad067, type: 3}
-  _speed: 5
-  _animation: {fileID: 1269335714664553309}
-  _speedMultiplicator: 2.5
-  _rb: {fileID: 1269335713483238332}
 --- !u!1 &1269335713479519344
 GameObject:
   m_ObjectHideFlags: 0
@@ -141,7 +120,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1269335713483238331
 Transform:
   m_ObjectHideFlags: 0
