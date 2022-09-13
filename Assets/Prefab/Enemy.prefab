@@ -48,6 +48,8 @@ MonoBehaviour:
   _JumpInput: {fileID: -4543771540272580436, guid: 8e800c113a8c38c49816e2ed915ad067, type: 3}
   _AttackInput: {fileID: -9220238437504543878, guid: 8e800c113a8c38c49816e2ed915ad067, type: 3}
   _RunInput: {fileID: 6938188500677071925, guid: 8e800c113a8c38c49816e2ed915ad067, type: 3}
+  _PickUp: {fileID: -1469378051067396837, guid: 8e800c113a8c38c49816e2ed915ad067, type: 3}
+  _Throw: {fileID: -8633253760151186474, guid: 8e800c113a8c38c49816e2ed915ad067, type: 3}
   _speed: 5
   _animation: {fileID: 1269335714664553309}
   _speedMultiplicator: 2.5
@@ -141,7 +143,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1269335713483238331
 Transform:
   m_ObjectHideFlags: 0
