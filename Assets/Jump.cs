@@ -1,17 +1,24 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Jump : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] Animator _animation;
+
+    [Header ("Script Link Dependance")]
+    [SerializeField] Movement movement;
+    [SerializeField] Jump jump;
+    [SerializeField] Attack attack;
+    public void Load ()
     {
-        
+        _animation.SetTrigger ("Jump");
+        Debug.Log ("Jump");
     }
 
-    // Update is called once per frame
-    void Update()
+
+    void FixedUpdate()
     {
         
     }

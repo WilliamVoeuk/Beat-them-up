@@ -10,14 +10,29 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField] Slider Slider1;
     [SerializeField] Slider Slider2;
     [SerializeField] Slider Slider3;
-    const int MAX_health = 100;
-    [Range(0, MAX_health)] public int health;
+    [SerializeField] int _dammage;
+    [SerializeField] const int MAX_health = 100;
+    [Range(0, MAX_health)] public int _health;
+
+
+    private void Start ()
+    {
+        _health = MAX_health;
+    }
 
     private void Update()
     {
-        Slider1.value = (health * 100/ MAX_health) ; 
-        Slider2.value = (health * 100 / MAX_health) ; 
-        Slider3.value = (health * 100 / MAX_health) ; 
+        Slider1.value = (_health * 100/ MAX_health) ; 
+        Slider2.value = (_health * 100 / MAX_health) ; 
+        Slider3.value = (_health * 100 / MAX_health) ;
+
+        Dammage ();
+    }
+
+    void Dammage ()
+    {
+        _health -= _dammage ;
+
     }
 
 }
