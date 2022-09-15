@@ -49,7 +49,8 @@ public class Movement : MonoBehaviour
         }
         else
         {
-            _isWalking = false;            
+            _isWalking = false;
+            _direction = Vector2.zero;
         }
         
         
