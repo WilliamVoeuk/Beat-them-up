@@ -64,6 +64,17 @@ public class Movement : MonoBehaviour
         {
             _isRunning = false;
         }
+        if (_direction.magnitude > 0.01f)
+        {
+            if (_direction.x > 0)
+            {
+                _rb.transform.rotation = Quaternion.Euler (0, 0, 0);
+            }
+            else
+            {
+                _rb.transform.rotation = Quaternion.Euler (0, 180, 0);
+            }
+        }
     }
 
     #endregion
