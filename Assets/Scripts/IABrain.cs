@@ -10,8 +10,11 @@ public class IABrain : MonoBehaviour
     [SerializeField] Movement movement;
     [SerializeField] Attack attack;
 
-    [SerializeField] PlayerTag Player;
     [SerializeField] float _limitDistance;
+    [SerializeField] float _agroDistance;
+
+
+    PlayerTag Player;
 
     public void SetTarget (PlayerTag player)
     {
@@ -37,7 +40,10 @@ public class IABrain : MonoBehaviour
             }
             else
             {
-                movement.SetDirection (Player.transform.position - transform.position);
+                if (distanceToPlayer < _agroDistance)
+                {
+                    movement.SetDirection (Player.transform.position - transform.position);
+                }
             }
 
         }
