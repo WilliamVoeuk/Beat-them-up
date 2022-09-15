@@ -37,6 +37,7 @@ public class IABrain : MonoBehaviour
             if (distanceToPlayer < _limitDistance)
             {
                 movement.SetDirection (Vector2.zero);
+                attack.Launch ();
             }
             else
             {

@@ -10,29 +10,19 @@ public class HealthUi : MonoBehaviour
     [SerializeField] Slider Slider1;
     [SerializeField] Slider Slider2;
     [SerializeField] Slider Slider3;
-    [SerializeField] int _dammage;
     [SerializeField] Health _PlayerMaxHealth;
-    
-    int _currentHealth;
 
     private void Start ()
     {
-        _currentHealth = _PlayerMaxHealth._health;
-        Debug.Log($"Health: {_currentHealth}");
+        Debug.Log($"Health: {_PlayerMaxHealth.CurrentHealth} / {_PlayerMaxHealth.MaxHealth}");
     }
 
     private void Update()
     {
-        Slider1.value = (_currentHealth * 100/ _PlayerMaxHealth._health) ; 
-        Slider2.value = (_currentHealth * 100 / _PlayerMaxHealth._health) ; 
-        Slider3.value = (_currentHealth * 100 / _PlayerMaxHealth._health) ;
+        Slider1.value = (_PlayerMaxHealth.CurrentHealth * 100/ _PlayerMaxHealth.MaxHealth) ; 
+        Slider2.value = (_PlayerMaxHealth.CurrentHealth * 100 / _PlayerMaxHealth.MaxHealth) ; 
+        Slider3.value = (_PlayerMaxHealth.CurrentHealth * 100 / _PlayerMaxHealth.MaxHealth) ;
 
-        Dammage ();
+        
     }
-
-    void Dammage()
-    {
-        _currentHealth -= _dammage;
-    }
-
 }

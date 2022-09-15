@@ -4,17 +4,32 @@ using UnityEngine;
 
 public class Health : MonoBehaviour
 {
-    [SerializeField] public int _health;
-    // Start is called before the first frame update
+    [SerializeField] int _healthMax;
+    [SerializeField] int _currentHealth;
 
+    public int MaxHealth
+    {
+        get { return _healthMax; }
+    }
+    public int CurrentHealth
+    {
+        get { return _currentHealth; }
+    }
 
-    // Update is called once per frame
+    private void Start ()
+    {
+        _currentHealth = _healthMax;
+    }
 
+    public void Damage(int dam)
+    {
+        _currentHealth -= dam;
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        HitTag foundTag;
-        foundTag = collision.attachedRigidbody.GetComponent<HitTag>();
+        HitContact foundTag;
+        foundTag = collision.attachedRigidbody.GetComponent<HitContact>();
         if (foundTag != null)
         {
             Debug.Log("tagged");
