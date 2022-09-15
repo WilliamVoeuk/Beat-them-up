@@ -14,6 +14,6 @@ public class Sensor : MonoBehaviour
     }
     private void OnTriggerExit2D (Collider2D collision)
     {
-            _IAbrain.SetDirection (Vector2.zero);        
+//            _IAbrain.SetDirection (Vector2.zero);        
     }
 }
