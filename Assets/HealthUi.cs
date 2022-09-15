@@ -27,12 +27,12 @@ public class HealthUi : MonoBehaviour
         Slider2.value = (_currentHealth * 100 / _PlayerMaxHealth._health) ; 
         Slider3.value = (_currentHealth * 100 / _PlayerMaxHealth._health) ;
 
-        //Dammage ();
+        Dammage ();
     }
 
-/*    void Dammage ()
+    void Dammage()
     {
-        _currentHealth -= _dammage ;
-    }*/
+        _currentHealth -= _dammage;
+    }
 
 }
