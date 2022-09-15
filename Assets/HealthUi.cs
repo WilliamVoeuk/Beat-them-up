@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
-[ExecuteAlways]
+//[ExecuteAlways]
 public class HealthUi : MonoBehaviour   
 {
     [SerializeField] Slider Slider1;
