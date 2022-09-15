@@ -9,11 +9,15 @@ public class Sensor : MonoBehaviour
     {
         if (collision.attachedRigidbody.TryGetComponent<PlayerTag> (out var player))
         {
-            _IAbrain.SetDirection (player);
+            _IAbrain.SetTarget (player);
         }
     }
     private void OnTriggerExit2D (Collider2D collision)
     {
-            _IAbrain.SetDirection (Vector2.zero);        
+        if (collision.attachedRigidbody.TryGetComponent<PlayerTag> (out var player))
+        {
+            _IAbrain.Removetarget (player);
+        }
+            
     }
 }
