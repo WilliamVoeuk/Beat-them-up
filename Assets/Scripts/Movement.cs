@@ -21,7 +21,7 @@ public class Movement : MonoBehaviour
     #region Move
     internal void SetDirection(Vector2 vector2)
     {
-        _direction = vector2;
+        _direction = vector2.normalized;
     }
 
     public void Load ()
